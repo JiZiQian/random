@@ -4,6 +4,8 @@
 <meta charset="utf-8">
 <script>
 	function create(){
+		console.log(document.body.childNodes);
+		document.body.removeChild(document.body.childNodes[12]);
 		let n=Number(document.getElementById("num").value);
 		let mn=Number(document.getElementById("min").value);
 		let mx=Number(document.getElementById("max").value);
@@ -36,6 +38,6 @@
 	随机数数量<input type="text" id="num"><br/>
 	随机数最小值<input type="text" id="min"><br/>
 	随机数最大值<input type="text" id="max"><br/>
-	<button type="button" onclick="create()">生成</button><br/>
+	<button type="button" onclick="create()" id="btn">生成</button><br/>
 </body>
 </html>
