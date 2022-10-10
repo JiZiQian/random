@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<script>
+	function create(){
+		let n=Number(document.getElementById("num").value);
+		let mn=Number(document.getElementById("min").value);
+		let mx=Number(document.getElementById("max").value);
+		console.log(n);
+		console.log(mn);
+		console.log(mx);
+		let arr=new Array();
+		for(let i=mn;i<=mx;i++){
+			arr[i-mn]=i;
+		}
+		console.log(arr);
+		for(let i=1;i<=n;i++){
+			let rand=Math.floor(Math.random()*arr.length);
+			console.log(arr[rand]);
+			let temp=String(arr[rand]);
+			temp=document.createTextNode(temp);
+			document.body.appendChild(temp);
+			temp=document.createElement("br");
+			document.body.appendChild(temp);
+			for(let j=rand;j<arr.length;j++){
+				arr[j]=arr[j+1];
+			}
+			arr.pop();
+		}
+	}
+</script>
+</head>
+<body>
+	<h1>生成多个不同随机数</h1>
+	随机数数量<input type="text" id="num"><br/>
+	随机数最小值<input type="text" id="min"><br/>
+	随机数最大值<input type="text" id="max"><br/>
+	<button type="button" onclick="create()">生成</button><br/>
+</body>
+</html>
