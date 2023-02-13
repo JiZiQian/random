@@ -17,6 +17,10 @@
 		console.log(n);
 		console.log(mn);
 		console.log(mx);
+		if(n>mx-mn+1){
+			alert("卡bug？没门！");
+			return;
+		}
 		let arr=new Array();
 		for(let i=mn;i<=mx;i++){
 			arr[i-mn]=i;
