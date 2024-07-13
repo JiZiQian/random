@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <script>
 	function clear(){
-		console.log(document.body.innerHTML);
-		document.body.innerHTML="<h1>生成多个不同随机数</h1>随机数数量<input type=\"text\" id=\"num\"><br/>随机数最小值<input type=\"text\" id=\"min\"><br/>随机数最大值<input type=\"text\" id=\"max\"><br/><button type=\"button\" onclick=\"create()\" id=\"btn\">生成</button><br/>"
-		console.log(document.body.innerHTML);
+		// console.log(document.body.innerHTML);
+		// document.body.innerHTML="<h1>生成多个不同随机数</h1>随机数数量<input type=\"text\" id=\"num\"><br/>随机数最小值<input type=\"text\" id=\"min\"><br/>随机数最大值<input type=\"text\" id=\"max\"><br/><button type=\"button\" onclick=\"create()\" id=\"btn\">生成</button><br/>"
+		// console.log(document.body.innerHTML);
 	}
 	function create(){
 		let btn=document.getElementById("btn");
@@ -22,7 +22,7 @@
 		console.log(n);
 		console.log(mn);
 		console.log(mx);
-		if(n>mx-mn+1){
+		if(n>mx-mn+1||!n||!mn||!mx){
 			alert("卡bug？没门！");
 			clear();
 			return;
